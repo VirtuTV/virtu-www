@@ -1,0 +1,36 @@
+{
+  "name": "panda-www",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "build": "babel server.js -d build",
+    "start": "nodemon --exec babel-node --presets es2015 server.js"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "dependencies": {
+    "body-parser": "1.17.1",
+    "cookie-parser": "1.4.3",
+    "express": "4.15.3",
+    "express-flash": "0.0.2",
+    "express-handlebars": "3.0.0",
+    "express-session": "1.15.3",
+    "handlebars": "4.0.8",
+    "helmet": "3.6.0",
+    "lodash": "4.17.4",
+    "morgan": "1.8.2",
+    "sendgrid": "5.1.1",
+    "web3": "0.19.0"
+  },
+  "devDependencies": {
+    "babel-cli": "6.24.1",
+    "babel-preset-latest": "6.24.1",
+    "babel-register": "6.24.1"
+  },
+  "author": "Vincent Porta <vporta7@gmail.com> (http://www.vincentjporta.com/)",
+  "license": "MIT"
+}

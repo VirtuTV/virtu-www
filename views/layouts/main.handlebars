@@ -1,0 +1,102 @@
+<!doctype html>
+<!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <title>VirtuTV</title>
+    <!--meta info-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="images/panda.ico">
+    <!--web fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
+    <!--lins css-->
+     
+    <link rel="stylesheet" type="text/css" media="all" href="plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" media="all" href="plugins/owl-carousel/owl.transitions.css">
+    <link rel="stylesheet" type="text/css" media="all" href="plugins/jackbox/css/jackbox.min.css">
+    <!--theme css-->
+    <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="all" href="css/theme-animate.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+    <script src="https://use.fontawesome.com/3d2b162258.js"></script>
+    <!--head libs-->
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <script src="plugins/jquery.queryloader2.min.js"></script>
+    <script src="plugins/modernizr.js"></script>
+    <script>
+      $('html').addClass('d_none');
+      $(document).ready(function(){
+        $('html').show();
+        $("body").queryLoader2({
+          backgroundColor: '#fff',
+          barColor : '#35eef6',
+          barHeight: 4,
+          percentage:true,
+          deepSearch:true,
+          minimumTime:1000
+        });
+      });
+    </script>
+  </head>
+  <body class="sticky_menu">
+    {{>nav}}
+    {{{body}}}
+    {{>footer}}
+
+    <!--include scripts-->
+    <script src="plugins/owl-carousel/owl.carousel.min.js"></script>
+    <script src="plugins/jackbox/js/jackbox-packed.min.js"></script>
+    <script src="plugins/jquery.appear.js"></script>
+    <script src="plugins/afterresize.min.js"></script>
+    <script src="plugins/jquery.plugin.min.js"></script>
+    <script src="plugins/jquery.countdown.min.js"></script>
+    <script src="plugins/twitter/jquery.tweet.min.js"></script>
+    <script src="plugins/flickr.js"></script>
+    <script src="plugins/jquery.easing.1.3.js"></script>
+    <script type="text/javascript">
+      // define variables
+       var items = document.querySelectorAll(".timeline li");
+
+       // check if an element is in viewport
+       // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
+       function isElementInViewport(el) {
+         var rect = el.getBoundingClientRect();
+         return (
+           rect.top >= 0 &&
+           rect.left >= 0 &&
+           rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+           rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+         );
+       }
+
+       function callbackFunc() {
+         for (var i = 0; i < items.length; i++) {
+           if (isElementInViewport(items[i])) {
+             items[i].classList.add("in-view");
+           }
+         }
+       }
+
+       // listen for events
+       window.addEventListener("load", callbackFunc);
+       window.addEventListener("resize", callbackFunc);
+       window.addEventListener("scroll", callbackFunc);
+
+       // Countdown to crowdsale
+        var newYear = new Date('July 28 2017'); 
+        $('#countdown').countdown({until: newYear}); 
+    </script>
+     
+    
+    <!--Theme Initializer-->
+    <script src="js/theme.js"></script>
+    <script src="js/theme.plugins.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
