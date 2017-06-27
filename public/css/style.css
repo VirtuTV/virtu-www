@@ -2626,8 +2626,8 @@ hr{
 .bg_gradient,
 .divider_type_2,.gradient_line,#qLbar{
 	background:#90dfac;
-	background:-webkit-gradient(linear,left top,right top,from(#70269f),to(#35eef6));
-	background:-webkit-linear-gradient(left,#70269f,#90dfac);
+	/*background:-webkit-gradient(linear,left top,right top,from(#70269f),to(#35eef6));*/
+	/*background:-webkit-linear-gradient(left,#70269f,#90dfac);*/
 	background:-moz-linear-gradient(left,#70269f,#35eef6);
 	background:-o-linear-gradient(left,#70269f,#35eef6);
 	background:-ms-linear-gradient(left,#70269f,#35eef6);
