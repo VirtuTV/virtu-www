@@ -4,13 +4,6 @@ export default (userEmail) => {
 
     Sincerely, 
       The VirtuTV Team`
-
-  // let sg = require('sendgrid')(process.env.SENDGRID_API_KEY)
-  // let helper = require('sendgrid').mail
-  // let fromEmail = new helper.Email('vporta61@gmail.com')
-  // let toEmail = new helper.Email(userEmail)
-  // let content = new helper.Content('text/plain', userComment)
-  // let mail = new helper.Mail(fromEmail, toEmail, content)
   var helper = require('sendgrid').mail;
   var fromEmail = new helper.Email('subscribe@VirtuTV.com');
   var toEmail = new helper.Email(userEmail);
