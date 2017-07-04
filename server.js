@@ -55,6 +55,9 @@ app.use('/', teamController)
 app.use('/', faqController)
 app.use('/', crowdsaleController)
 
+var buildDir = __dirname + "/build/";
+app.use(express.static(buildDir));
+
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`)
 })

@@ -32,19 +32,19 @@ var _expressFlash = require('express-flash');
 
 var _expressFlash2 = _interopRequireDefault(_expressFlash);
 
-var _home = require('../controllers/home');
+var _home = require('./controllers/home');
 
 var _home2 = _interopRequireDefault(_home);
 
-var _team = require('../controllers/team');
+var _team = require('./controllers/team');
 
 var _team2 = _interopRequireDefault(_team);
 
-var _faq = require('../controllers/faq');
+var _faq = require('./controllers/faq');
 
 var _faq2 = _interopRequireDefault(_faq);
 
-var _crowdsale = require('../controllers/crowdsale');
+var _crowdsale = require('./controllers/crowdsale');
 
 var _crowdsale2 = _interopRequireDefault(_crowdsale);
 
