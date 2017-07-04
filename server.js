@@ -52,8 +52,8 @@ app.use(helmet())
 // Controllers 
 app.use('/', homeController)
 app.use('/', teamController)
-app.use('/', faqController)
-app.use('/', crowdsaleController)
+app.use( '/', faqController)
+app.use( '/', crowdsaleController)
 
 var buildDir = __dirname + "/build/";
 app.use(express.static(buildDir));

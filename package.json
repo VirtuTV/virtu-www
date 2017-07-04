@@ -2,10 +2,9 @@
   "name": "virtu-www",
   "version": "1.0.0",
   "description": "",
-  "main": "build/server.js",
   "scripts": {
     "build": "babel server.js -d build",
-    "start": "node build/server.js",
+    "start": "babel-node server.js",
     "dev": "nodemon --exec babel-node --presets es2015 server.js"
   },
   "babel": {

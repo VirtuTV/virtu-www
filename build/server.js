@@ -91,10 +91,13 @@ app.use(helmet()
 // app.use(morgan('combined'))
 
 // Controllers 
-);app.use('/', _home2.default);
-app.use('/', _team2.default);
-app.use('/', _faq2.default);
-app.use('/', _crowdsale2.default);
+);app.use(__dirname + '/', _home2.default);
+app.use(__dirname + '/', _team2.default);
+app.use(__dirname + '/', _faq2.default);
+app.use(__dirname + '/', _crowdsale2.default);
+
+var buildDir = __dirname + "/build/";
+app.use(_express2.default.static(buildDir));
 
 app.listen(PORT, function () {
   console.log('App is listening on port ' + PORT);
