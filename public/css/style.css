@@ -830,8 +830,13 @@ table:not(.table_type_9) tr:hover,
 }
 .github:hover{
 	background:black;
-	border-color:#328dd3;	
+	border-color:black;	
 }
+.reddit:hover{
+	background:#FF5700;
+	border-color:#FF5700;	
+}
+
 .facebook_color:hover *{
 	color:#39599f !important;
 }
