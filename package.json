@@ -2,10 +2,10 @@
   "name": "virtu-www",
   "version": "1.0.0",
   "description": "Website for the VirtuTV video consumption and monetization platform",
-  "main": "server.js",
+  "main": "build/server.js",
   "scripts": {
     "build": "babel server.js -d build",
-    "start": "node server.js",
+    "start": "node ./build/server.js",
     "dev": "nodemon --exec babel-node --presets es2015 server.js"
   },
   "babel": {

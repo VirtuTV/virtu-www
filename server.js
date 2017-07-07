@@ -13,9 +13,6 @@ import crowdsaleController from './controllers/crowdsale'
 
 import Web3 from 'web3'
 
-// var W = new Web3();
-// console.log(W.eth.getBalance);
-
 const app = express()
 const PORT = 3000
 
@@ -47,16 +44,11 @@ app.use(express.static('public'))
 const helmet = require('helmet')
 app.use(helmet())
 
-// app.use(morgan('combined'))
-
 // Controllers 
 app.use('/', homeController)
 app.use('/', teamController)
 app.use( '/', faqController)
 app.use( '/', crowdsaleController)
-
-var buildDir = __dirname + "/build/";
-app.use(express.static(buildDir));
 
 app.listen(PORT, () => {
   console.log(`App is listening on port ${PORT}`)
