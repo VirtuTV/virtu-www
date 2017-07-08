@@ -4,21 +4,18 @@
   "engines": {
     "node": "6.10.0"
   },
-  "description": "Website for the VirtuTV video consumption and monetization platform",
   "main": "server.js",
+  "description": "Website for the VirtuTV video consumption and monetization platform",
   "scripts": {
+    "dev": "nodemon --exec babel-node --presets es2015 server.js",
     "build": "",
-    "start": "babel-node server.js",
-    "dev": "nodemon --exec babel-node --presets es2015 server.js"
-  },
-  "babel": {
-    "presets": [
-      "latest"
-    ]
+    "serve": "babel-node server.js",
+    "test": "mocha --compilers js:babel-register"
   },
   "dependencies": {
-    "babel-cli": "6.24.1",
+    "babel-polyfill": "6.23.0",
     "body-parser": "1.17.1",
+    "chai": "4.0.2",
     "cookie-parser": "1.4.3",
     "express": "4.15.3",
     "express-flash": "0.0.2",
@@ -28,6 +25,7 @@
     "helmet": "3.6.0",
     "lodash": "4.17.4",
     "morgan": "1.8.2",
+    "request": "2.81.0",
     "sendgrid": "5.1.1",
     "web3": "0.19.0"
   },
@@ -35,9 +33,9 @@
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-loader": "7.1.1",
-    "babel-preset-env": "1.6.0",
-    "babel-preset-latest": "6.24.1",
-    "babel-register": "6.24.1"
+    "babel-preset-es2015": "6.24.1",
+    "babel-register": "6.24.1",
+    "mocha": "3.4.2"
   },
   "author": "Vincent Porta <vporta7@gmail.com> (http://www.vincentjporta.com/)",
   "license": "MIT"

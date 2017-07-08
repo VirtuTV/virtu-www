@@ -1,17 +1,34 @@
-import express from 'express'
-import session from 'express-session'
-import path from 'path'
-import morgan from 'morgan'
-import sendgrid from 'sendgrid'
-import bodyParser from 'body-parser'
-import cookieParser from 'cookie-parser'
-import flash from 'express-flash'
-import homeController from './controllers/home' 
-import teamController from './controllers/team'
-import faqController from './controllers/faq'
-import crowdsaleController from './controllers/crowdsale'
+// import "babel-polyfill";
+require('babel-polyfill')
+// import express from 'express'
+const express = require('express')
+// import session from 'express-session'
+const session = require('express-session')
+// import path from 'path'
+const path = require('path')
+// import morgan from 'morgan'
+const morgan = require('morgan')
+// import sendgrid from 'sendgrid'
+const sendgrid = require('sendgrid')
+// import bodyParser from 'body-parser'
+const bodyParser = require('body-parser')
+// import cookieParser from 'cookie-parser'
+const cookieParser = require('cookie-parser')
+// import flash from 'express-flash'
+const flash = require('express-flash')
+// import homeController from './controllers/home' 
+const homeController = require('./controllers/home')
+// import teamController from './controllers/team'
+const teamController = require('./controllers/team')
+// import faqController from './controllers/faq'
+const faqController = require('./controllers/faq')
+// import crowdsaleController from './controllers/crowdsale'
+const crowdsaleController = require('./controllers/crowdsale')
 
-import Web3 from 'web3'
+// import Web3 from 'web3'
+const Web3 = require('web3')
+
+
 
 const app = express()
 const PORT = 3000
@@ -36,7 +53,7 @@ app.engine('handlebars', exphbs({
 
 app.set('view engine', 'handlebars')
 app.set('views', path.join(__dirname, 'views'))
-app.set('build', path.resolve(__dirname, 'build'))
+
 // Static assets in /public
 app.use(express.static('public'))
 

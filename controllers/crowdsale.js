@@ -1,6 +1,9 @@
-import express from 'express'
-import flash from 'express-flash'
-import Sendgrid from '../helpers/sendgrid.js'
+// import express from 'express'
+const express = require('express')
+// import flash from 'express-flash'
+const flash = require('express-flash')
+// import Sendgrid from '../helpers/sendgrid.js'
+const Sendgrid = require('../helpers/sendgrid.js')
 
 const router = express.Router()
 
