@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "nodemon --exec babel-node --presets es2015 server.js",
     "build": "",
-    "serve": "node server.js",
+    "start": "node server.js",
     "test": "mocha --compilers js:babel-register"
   },
   "dependencies": {
