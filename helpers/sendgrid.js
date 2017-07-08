@@ -1,4 +1,4 @@
-export default (userEmail) => {
+module.exports = (userEmail) => {
   let userComment = 
   `Thank you for subscribing for updates to the VirtuTV CrowdSale! We will notify you of any updates regarding the VirtuTV project, and send you reminders periodically leading up to the very first Crowdsale. 
 
