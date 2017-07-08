@@ -36,7 +36,7 @@ app.engine('handlebars', exphbs({
 
 app.set('view engine', 'handlebars')
 app.set('views', path.join(__dirname, 'views'))
-
+app.set('build', path.resolve(__dirname, 'build'))
 // Static assets in /public
 app.use(express.static('public'))
 

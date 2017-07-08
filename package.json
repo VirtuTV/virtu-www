@@ -1,11 +1,14 @@
 {
   "name": "virtu-www",
   "version": "1.0.0",
+  "engines": {
+    "node": "6.10.0"
+  },
   "description": "Website for the VirtuTV video consumption and monetization platform",
-  "main": "build/server.js",
+  "main": "server.js",
   "scripts": {
-    "build": "babel server.js -d build",
-    "start": "node ./build/server.js",
+    "build": "",
+    "start": "babel-node server.js",
     "dev": "nodemon --exec babel-node --presets es2015 server.js"
   },
   "babel": {
@@ -14,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "babel-cli": "6.24.1",
     "body-parser": "1.17.1",
     "cookie-parser": "1.4.3",
     "express": "4.15.3",
@@ -29,6 +33,9 @@
   },
   "devDependencies": {
     "babel-cli": "6.24.1",
+    "babel-core": "6.25.0",
+    "babel-loader": "7.1.1",
+    "babel-preset-env": "1.6.0",
     "babel-preset-latest": "6.24.1",
     "babel-register": "6.24.1"
   },
