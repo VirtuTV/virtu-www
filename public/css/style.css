@@ -4353,8 +4353,8 @@ input[class*="_limit"]{
 		height:350px;
 	}
 	.screens > .layer_1{
-		width:70%;
-		margin-left:-35%;
+		width:100%;
+		margin-left:-50%;
 	}
 	.screens > .layer_2,
 	.screens > .layer_3{
@@ -4780,7 +4780,7 @@ input[class*="_limit"]{
 	.main_menu.type_2 > li > .sub_menu:before,
 	.main_menu > li > .mega_menu_container:before,
 	.main_menu.type_2 > li > .sub_menu > li:first-child > .sub_menu:before{
-		display:none;
+		display:none; 
 	}
 	.w_xs_half_column{
 		width:50%;
