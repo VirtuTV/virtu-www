@@ -836,6 +836,10 @@ table:not(.table_type_9) tr:hover,
 	background:#FF5700;
 	border-color:#FF5700;	
 }
+.medium:hover{
+	background:#00AB6C;
+	border-color:#00AB6C;	
+}
 
 .facebook_color:hover *{
 	color:#39599f !important;

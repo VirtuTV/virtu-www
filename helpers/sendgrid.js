@@ -18,7 +18,7 @@ module.exports = (userEmail) => {
     body: mail.toJSON()
   });
 
-  sg.API(request, function (error, response) {
+  sg.API(request, (error, response) => {
     if (error) {
       console.log('Error response received');
     }
