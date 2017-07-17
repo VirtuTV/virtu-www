@@ -3465,6 +3465,9 @@ figcaption.blog_post .blog_side_container{
 .screens,.mobile{
 	height:750px;
 }
+.wrap-video{
+	height:850px;
+}
 .screens > [class^="layer_"],.mobile > [class^="layer_"]{
 	position:absolute;
 	bottom:0;
