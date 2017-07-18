@@ -843,7 +843,10 @@ table:not(.table_type_9) tr:hover,
 	background:#00AB6C;
 	border-color:#00AB6C;	
 }
-
+.slack:hover{
+	background:#e01563;
+	border-color:#e01563;	
+}
 .facebook_color:hover *{
 	color:#39599f !important;
 }
