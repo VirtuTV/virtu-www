@@ -331,6 +331,9 @@ input[type="radio"] + label:before{
 .tt_uppercase{
 	text-transform: uppercase;
 }
+.half-width {
+	width: 50%;
+}
 .db_centered{
 	margin-left:auto;
 	margin-right:auto;
