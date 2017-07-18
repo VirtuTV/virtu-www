@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
   res.render('index')
 })
 
-router.get('/whitepaper', (req, res) => {
-  const tempFile="./whitepaper.pdf";
+router.get('/whitepaper.pdf', (req, res) => {
+  const tempFile="../public/whitepaper.pdf";
     fs.readFile(tempFile, function (err,data){
        res.contentType("application/pdf");
        res.send(data);
