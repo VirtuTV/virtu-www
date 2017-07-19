@@ -8,7 +8,7 @@ const Sendgrid = require('../helpers/sendgrid.js')
 const router = express.Router()
 
 router.get('/crowdsale', (req, res) => {
-  res.render('crowdsale')
+  res.render('crowdsale', { csrfToken: req.csrfToken() })
 })
 
 // router.post('/subscribe', (req, res) => {

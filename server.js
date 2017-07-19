@@ -14,6 +14,7 @@ const sendgrid = require('sendgrid')
 const bodyParser = require('body-parser')
 // import cookieParser from 'cookie-parser'
 const cookieParser = require('cookie-parser')
+const csrf = require('csurf')
 // import flash from 'express-flash'
 const flash = require('express-flash')
 const serveStatic = require('serve-static')
@@ -38,6 +39,17 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 app.use(cookieParser())
+
+app.use(csrf({ cookie: true }))
+
+// error handler 
+app.use(function (err, req, res, next) {
+  if (err.code !== 'EBADCSRFTOKEN') return next(err)
+ 
+  // handle CSRF token errors here 
+  res.status(403)
+  res.send('form tampered with')
+})
 
 app.set('trust proxy', 1)
 const expiryDate = new Date(Date.now() + 60 * 60 * 1000) // 1 hour

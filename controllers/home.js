@@ -4,7 +4,7 @@ const fs = require('fs')
 const router = express.Router()
 
 router.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', { csrfToken: req.csrfToken() })
 })
 
 router.get('/whitepaper.pdf', (req, res) => {
