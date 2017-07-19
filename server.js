@@ -71,6 +71,7 @@ app.use(serveStatic(path.join(__dirname, 'public')))
 const helmet = require('helmet')
 app.use(helmet())
 
+
 // Controllers 
 app.use('/', homeController)
 app.use('/', teamController)
