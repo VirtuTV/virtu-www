@@ -77,8 +77,9 @@ app.set('view engine', 'handlebars')
 app.set('views', path.join(__dirname, 'views'))
 
 // Static assets in /public
-// app.use(express.static('public'))
+// express.static is express 3. Use serveStatic for express 4. 
 app.use(serveStatic(path.join(__dirname, 'public')))
+
 // Security Middleware
 const helmet = require('helmet')
 app.use(helmet())

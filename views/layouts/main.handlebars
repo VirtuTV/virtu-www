@@ -15,9 +15,9 @@
     <link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic' rel='stylesheet' type='text/css'>
     <!--lins css-->
      
-    <link rel="stylesheet" type="text/css" media="all" href="plugins/owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" type="text/css" media="all" href="plugins/owl-carousel/owl.transitions.css">
-    <link rel="stylesheet" type="text/css" media="all" href="plugins/jackbox/css/jackbox.min.css">
+{{!--     <link rel="stylesheet" type="text/css" media="all" href="plugins/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" media="all" href="plugins/owl-carousel/owl.transitions.css"> --}}
+    {{!-- <link rel="stylesheet" type="text/css" media="all" href="plugins/jackbox/css/jackbox.min.css"> --}}
     <!--theme css-->
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
     <!-- Latest compiled and minified CSS -->
@@ -59,45 +59,13 @@
     <script src="plugins/twitter/jquery.tweet.min.js"></script>
     <script src="plugins/flickr.js"></script>
     <script src="plugins/jquery.easing.1.3.js"></script>
-    <script type="text/javascript">
-      // define variables
-       var items = document.querySelectorAll(".timeline li");
-
-       // check if an element is in viewport
-       // http://stackoverflow.com/questions/123999/how-to-tell-if-a-dom-element-is-visible-in-the-current-viewport
-       function isElementInViewport(el) {
-         var rect = el.getBoundingClientRect();
-         return (
-           rect.top >= 0 &&
-           rect.left >= 0 &&
-           rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-           rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-         );
-       }
-
-       function callbackFunc() {
-         for (var i = 0; i < items.length; i++) {
-           if (isElementInViewport(items[i])) {
-             items[i].classList.add("in-view");
-           }
-         }
-       }
-
-       // listen for events
-       window.addEventListener("load", callbackFunc);
-       window.addEventListener("resize", callbackFunc);
-       window.addEventListener("scroll", callbackFunc);
-
-       // Countdown to crowdsale
-        var newYear = new Date('August 9 2017'); 
-        $('#countdown').countdown({until: newYear}); 
-    </script>
      
-    
+    <script src="js/countdown.js"></script>
     <!--Theme Initializer-->
-    <script src="js/theme.js"></script>
-    <script src="js/theme.plugins.js"></script>
+    {{!--<script src="js/theme.js"></script>
+    <script src="js/theme.plugins.js"></script>--}}
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
   </body>
 </html>
