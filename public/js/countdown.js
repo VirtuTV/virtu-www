@@ -31,6 +31,8 @@ $(document).ready(() => {
   var newYear = new Date('August 9 2017'); 
   $('#countdown').countdown({until: newYear}); 
 
+  var newYear = new Date('August 9 2017'); 
+  $('#countdown-2').countdown({until: newYear});
   // Lazy Load
   $(".lazy").lazyload({
     threshold : 100

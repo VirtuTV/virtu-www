@@ -19,4 +19,11 @@ router.get('/crowdsale', (req, res) => {
 //   })
 // })
 
+router.get('/contribution', (req, res) => {
+  res.render('contribution', { 
+    layout: 'contribute',
+    csrfToken: req.csrfToken() 
+  })
+})
+
 module.exports = router
