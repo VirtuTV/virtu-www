@@ -14,7 +14,7 @@ const sendgrid = require('sendgrid')
 const bodyParser = require('body-parser')
 // import cookieParser from 'cookie-parser'
 const cookieParser = require('cookie-parser')
-const csrf = require('csurf')
+const csurf = require('csurf')
 // import flash from 'express-flash'
 const flash = require('express-flash')
 const serveStatic = require('serve-static')
@@ -27,20 +27,17 @@ const faqController = require('./controllers/faq')
 // import crowdsaleController from './controllers/crowdsale'
 const crowdsaleController = require('./controllers/crowdsale')
 
-// import Web3 from 'web3'
-const Web3 = require('web3')
-
-
-
 const app = express()
 const PORT = process.env.PORT || 3000;
+
+const Web3 = require('web3')
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 
 app.use(cookieParser())
 
-app.use(csrf({ cookie: true }))
+app.use(csurf({cookie: true}))
 
 // error handler 
 app.use(function (err, req, res, next) {
