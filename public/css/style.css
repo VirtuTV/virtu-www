@@ -3554,8 +3554,9 @@ figcaption.blog_post .blog_side_container{
 .screens,.mobile{
 	height:750px;
 }
+/* Must change to 850px or so when the video is done*/
 .wrap-video{
-	height:850px;
+	height:250px;
 }
 .screens > [class^="layer_"],.mobile > [class^="layer_"]{
 	position:absolute;
