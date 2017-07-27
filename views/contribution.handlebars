@@ -104,9 +104,9 @@
             <input type="hidden" name="_csrf" value="{{csrfToken}}">
             <div class="checkbox">
               <label class="color_light fw_light">
-                <input type="checkbox" value="true" name="agree01" required="true">
+                <input type="checkbox" value="true" name="agree01" required="true" onchange="document.getElementById('sendNewSms').disabled = !this.checked;">
                 <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
-                I confirm that I have read the Contribution Terms.
+                I confirm that I have read the Contribution Terms and Conditions.
               </label>
             </div>
             <div class="checkbox">
@@ -121,6 +121,20 @@
                 <input type="checkbox" value="true" name="agree03" required="true">
                 <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
                 I understand that it may take up to 7 days from the time the contribution period ends to receive Virtucoin.
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="color_light fw_light">
+                <input type="checkbox" value="true" name="agree04" required="true">
+                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                I hereby confirm to be: <strong>Non US citizen nor signing on behalf of a US citizen.</strong>
+              </label>
+            </div>
+            <div class="checkbox">
+              <label class="color_light fw_light">
+                <input type="checkbox" value="true" name="agree05" required="true">
+                <span class="cr"><i class="cr-icon glyphicon glyphicon-ok"></i></span>
+                I hereby acknowledge the following points: Contributor does not receive equity in VirtuTV. Contributions will be used to fullfill the VirtuTV platform's mission.</strong>
               </label>
             </div>
             <br>

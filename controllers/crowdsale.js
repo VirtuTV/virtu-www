@@ -22,11 +22,14 @@ router.get('/contribution', csrfProtection, (req, res) => {
 
 router.post('/user-agreed', parseForm, csrfProtection, (req, res) => {
   console.log(req.body)
-  const userAgrees = {};
-  res.render('contribution', { 
-    layout: 'contribute',
-    userAgreed: userAgrees
-  })
+  if (req.body.agree01 === 'true' && req.body.agree02 === 'true' && req.body.agree03 === 'true' && req.body.agree04 === 'true' && req.body.agree05 === 'true') {
+    const userAgrees = {};
+
+    res.render('contribution', { 
+      layout: 'contribute',
+      userAgreed: userAgrees
+    })
+  }
 })
 
 
