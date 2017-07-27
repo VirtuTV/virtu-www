@@ -253,6 +253,9 @@ input[type="radio"] + label:before{
 .m_left_15{
 	margin-left:15px;
 }
+.m_left_35{
+	margin-left:35px;
+}
 .m_bottom_0{
 	margin-bottom:0px !important;
 }
