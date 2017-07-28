@@ -5023,6 +5023,9 @@ input[class*="_limit"]{
 	.coupon{
 		width: 80%;
 	}
+	#ico-details{
+		top: 30px;
+	}
 }
 @media only screen and (max-width:696px){
 	.steps_nav li .icon_wrap_size_7,
@@ -5032,10 +5035,16 @@ input[class*="_limit"]{
 		line-height: 60px;
 		font-size:30px;
 	}
+	#ico-details{
+		top: 30px;
+	}
 }
 @media only screen and (max-width:500px){
 	.product_view{
 		width:100%;
+	}
+	#ico-details{
+		top: 30px;
 	}
 }
 @media only screen and (max-width:390px){
